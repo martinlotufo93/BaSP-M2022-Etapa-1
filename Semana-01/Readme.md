@@ -3,7 +3,6 @@
 Done:
 
 ```
-I think I have done all the things to do. I appreciate my teacher's corrections for possible modifications
-
+we have made the last corrections with the teacher through zoom and I think the work is ready for corrections
 ```
 
