@@ -16,6 +16,7 @@ header{
     float:right;
     top: 0;
     background-color: #fffff;
+    display;
 
 }
 header .three-bars{
@@ -45,22 +46,80 @@ footer{
     bottom:0;
 }
 
-.landing {
+.landing{
     float:right;
     width:1063px;
     height:712px;
     background-color: aqua;
     overflow: auto;
 }
-.search-bar {
+.search-bar{
     position: relative;
     text-align: center;
     margin: 20px;
 }
-.imagen {
-    position: absolute;
+.search-button{
+    position: relative;
     top: 0;
-    height: 16px;
-    width: 16px;
-    right: 85px;
+    height: 38px;
+    width: 215px;
+    padding-left: 57px;
+    border-radius: 7px;
+}
+.search-icon {
+    position: absolute;
+    height: 30x;
+    width: 30px;
+    right: 263px;
+    top: 6px;
+    z-index: 2;
+}
+
+.menu{
+    position: relative;
+    height: 110px;
+    font-size: 30px;
+}
+.menu a{
+    text-decoration: none;
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 50px;
+    color: #AACE9B;
+}
+.green-line-2{
+    position: absolute;
+    height: 5px;
+    width: 85px;
+    background-color: #AACE9B;
+    bottom: 0px;
+    margin-left: 50px;
+}
+
+.home-menu{
+    height: 250px;
+    position: relative;
+    width: 250px;
+    background-color: blanchedalmond;
+    border-bottom: gray;
+}
+
+/*.sidebar-list a{
+    text-decoration: none;
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 50px;
+    color: #AACE9B;
+}*/
+/*.sidebar-list a{
+    text-decoration: none;
+    display: block;
+    height: 80px;
+    width: 270px;
+    display: block;
+    font-size: 25px;
+    color: black;
+}*/
+.text-side{
+    z-index: 1;
 }
