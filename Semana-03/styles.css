@@ -9,6 +9,7 @@ body{
     float:left;
     position:fixed;
     border-right:3px solid #000;
+
 }
 header{
     width: 1064px;
@@ -85,7 +86,7 @@ footer{
     position: absolute;
     margin-top: 60px;
     margin-left: 50px;
-    color: #AACE9B;
+    color: black;
 }
 .green-line-2{
     position: absolute;
@@ -95,31 +96,101 @@ footer{
     bottom: 0px;
     margin-left: 50px;
 }
-
+.home-menu a{
+    text-decoration: none;
+    color: rgb(112, 106, 106);
+}
 .home-menu{
     height: 250px;
     position: relative;
     width: 250px;
-    background-color: blanchedalmond;
+    background-color: white;
     border-bottom: gray;
+    margin-left: 50px;
+    display: block;
 }
-
-/*.sidebar-list a{
+.homes{
+    height: 20px;
+    width: 249px;
+    position: absolute;
+    margin-left: 0px;
+    padding-top: 60px;
+}
+.sign-up{
+    height: 24px;
+    width: 249px;
+    position: absolute;
+    margin-left: 0px;
+    padding-top: 119px;
+}
+.log-in{
+    height: 24px;
+    width: 249px;
+    position: absolute;
+    margin-left: 0px;
+    padding-top: 180px;
+}
+.greyline{
+    position: absolute;
+    height: 1px;
+    width: 245px;
+    background-color: rgb(112, 106, 106);
+    bottom: 0px;
+    margin-left: 0px;
+}
+.getintouch{
+    position: relative;
+    height: 110px;
+    font-size: 30px;
+}
+.getintouch a{
     text-decoration: none;
     position: absolute;
     margin-top: 60px;
     margin-left: 50px;
-    color: #AACE9B;
-}*/
-/*.sidebar-list a{
-    text-decoration: none;
-    display: block;
-    height: 80px;
-    width: 270px;
-    display: block;
-    font-size: 25px;
     color: black;
-}*/
-.text-side{
-    z-index: 1;
+}
+.green-line-3{
+    position: absolute;
+    height: 5px;
+    width: 180px;
+    background-color: #AACE9B;
+    bottom: 0px;
+    margin-left: 50px;
+}
+
+.textside{
+    width: 249px;
+    height: 150px;
+    text-align: left;
+    font-size: 19px;
+    margin-left: 50px;
+    margin-top: 28px;
+}
+.contact{
+    position: relative;
+    background-color: chartreuse;
+    margin-left: 50px;
+    width: 245px;
+    height: 245px;
+    display: block;
+}
+.mail{
+    position: absolute;
+    width: 80px;
+    height:80px;
+    display: inline-block;
+    
+}
+.adress{
+    position: absolute;
+    width: 80px;
+    height:80px;
+    display: inline-block;
+}
+.phone{
+    position: relative;
+    width: 80px;
+    height:80px;
+    display: inline-block;
 }
