@@ -232,3 +232,42 @@ footer{
     border-radius: 5px;
     color: rgb(68, 67, 67);
 }
+.section-2{
+    height: 750px;
+    background-color: white;
+    position: relative;
+    margin-left: 3px;
+    padding: 5%;
+}
+.section-2 .record-hours,.section-2 .generate-reports, .section-2 .manage-resources, .section-2 .designate-roles{
+    display: inline-block;
+    width: 45%;
+    height: 40%;
+    background-color: white;
+    height: 200px;
+    padding-top: 10%;
+}
+.section-2 p{
+    font-size: 30px;
+    width: 25%;
+    margin-left: 150px;
+    position: absolute;
+}
+.section-2 h3{
+    color: black;
+    font-size: 35px;
+    position: absolute;
+    margin-top: -50px;
+    margin-left: 149px;
+}
+.section-2 h2{
+    font-size: 45px;
+    margin-left: 96px;
+}
+.green-line4{
+    height: 6px;
+    width: 85%;
+    background-color: #AACE9B;
+    margin-left: 96px;
+    margin-top: 10px;
+}
