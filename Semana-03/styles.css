@@ -109,27 +109,16 @@ footer{
     margin-left: 50px;
     display: block;
 }
-.homes{
-    height: 20px;
-    width: 249px;
-    position: absolute;
-    margin-left: 0px;
-    padding-top: 60px;
-}
-.sign-up{
-    height: 24px;
-    width: 249px;
-    position: absolute;
-    margin-left: 0px;
-    padding-top: 119px;
-}
-.log-in{
-    height: 24px;
-    width: 249px;
-    position: absolute;
-    margin-left: 0px;
-    padding-top: 180px;
-}
+.home-menu .homes,.home-menu .sign-up,.home-menu .log-in {
+	border-bottom:1px solid grey;
+    margin-bottom:30px;
+    padding-bottom: 5px;
+    font-size: 20px;
+	}
+.home-menu .homes {
+	margin-top:40px;
+    padding-top: 40px;
+	}
 .greyline{
     position: absolute;
     height: 1px;
@@ -198,4 +187,48 @@ footer{
 .contact .mail,.contact .adress {
 	border-bottom: 1px solid blue
 	}
-.section-1{}
+.section-1{
+    height: 750px;
+    background-color: white;
+    position: relative;
+    margin-left: 3px;
+}
+.section-1 h1, .section-1 h2, .section-1 p{
+    padding-left: 31px;
+    height: 20%;
+}
+.section-1 h1{
+    color: black;
+    font-size: 83px;
+    width: 443px;
+}
+.section-1 h2{
+    color: black;
+    font-size: 40px;
+    padding-top: 70px;
+    width: 700px;
+}
+.section-1 p{
+    color: gray;
+    font-size: 35px;
+    width: 700px;
+}
+.section-1 .main-image{
+    position: absolute;
+    width: 720px;
+    right: 0px;
+    top: 0px;
+    z-index: 2;
+}
+.button-1{
+    margin-left: 31px;
+    margin-top: 50px;
+    background-color:#AACE9B;
+    font-family: 'Roboto',arial;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 5px;
+    color: rgb(68, 67, 67);
+}
