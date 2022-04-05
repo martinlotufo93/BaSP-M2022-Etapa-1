@@ -5,7 +5,7 @@ body{
 
     width: 19%;
     height: 1024px;
-    background-color: #6d2929;
+    background-color: rgb(245, 241, 241);
     float:left;
     position:fixed;
     border-right:3px solid #000;
@@ -16,7 +16,7 @@ header{
     height: 155px;
     float:right;
     top: 0;
-    background-color: #fffff;
+    background-color: white;
     display;
 
 }
@@ -33,7 +33,7 @@ header .track{
 .green-line{
     height: 3px;
     width: 85%;
-    background-color: chartreuse;
+    background-color: #AACE9B;
     margin-left: 96px;
     margin-top: 10px;
 }
@@ -104,7 +104,7 @@ footer{
     height: 250px;
     position: relative;
     width: 250px;
-    background-color: white;
+    background-color: rgb(245, 241, 241);
     border-bottom: gray;
     margin-left: 50px;
     display: block;
@@ -166,32 +166,36 @@ footer{
     font-size: 19px;
     margin-left: 50px;
     margin-top: 28px;
+    color: gray;
 }
 .contact{
     position: relative;
-    background-color: chartreuse;
+    background-color: rgb(245, 241, 241);
     margin-left: 50px;
-    width: 245px;
+    width: 80%;
     height: 245px;
     display: block;
+    top: 40px;
+
 }
-.mail{
-    position: absolute;
-    width: 80px;
-    height:80px;
-    display: inline-block;
-    
-}
-.adress{
-    position: absolute;
-    width: 80px;
-    height:80px;
-    display: inline-block;
-}
-.phone{
-    position: relative;
-    width: 80px;
-    height:80px;
-    display: inline-block;
-}
+.contact .mail,.contact .adress,.contact .adress 
+{
+	display:inline-block;
+	padding: 10px 0px 10px 0px;
+	}
+.contact .mail a,.contact .adress a,.contact .phone a{
+	display:inline-block;
+    text-decoration: none;
+    color: gray;
+	}
+.contact .mail img,.contact .phone img,.contact .adress img {
+	vertical-align:middle;
+	margin-right:5px;
+	}
+.contact .adress a{
+	width:200px;
+	}
+.contact .mail,.contact .adress {
+	border-bottom: 1px solid blue
+	}
 .section-1{}
