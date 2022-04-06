@@ -42,7 +42,7 @@ footer{
     float:right;
     width:81%;
     height:100px;
-    background-color: rgb(255, 0, 179);
+    background-color: white;
     position:fixed;
     bottom:0;
 }
@@ -51,7 +51,7 @@ footer{
     float:right;
     width:81%;
     height:712px;
-    background-color: aqua;
+    background-color: white;
     overflow: auto;
 }
 .search-bar{
@@ -377,4 +377,64 @@ footer{
     right: 300px;
     text-decoration: none;
     color: #AACE9B;
+}
+.section-5{
+    height: 509px;
+    width: 778px;
+    background-color: rgb(226, 221, 221);
+    margin-left: 300px;
+    display: inline-block;
+    border-radius: 371px;
+    font-size: 12px;
+}
+.history{
+    width: 300px;
+    height: 300px;
+    margin-top: 80px;
+    margin-left: 82px;
+    
+}
+.objetive {
+    width: 300px;
+    height: 300px;
+    margin-top: 0px;
+    margin-left: 400px;
+    
+}
+.section-5 h2{
+    font-size: 20px;
+    color: gray;
+    margin-bottom: 5px;
+}
+.section-6{
+    width: 90%;
+    height: 400px;
+    background-color: white;
+    margin-left: 80px;
+    position: relative;
+    padding-top: 35px;
+}
+.column1, .column2, .column3{
+    width: 25%;
+    height: 350px;
+    display: inline-block;
+    padding-left: 100px;
+}
+.green-line5{
+    position: absolute;
+    height: 5px;
+    width: 300px;
+    background-color: #AACE9B;
+    
+}
+.section-6 ol{
+    font-size: 20px;
+    padding: 20px;
+}
+.section-6 h3{
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+.section-6 li{
+    padding-bottom: 25px;
 }
