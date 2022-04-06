@@ -291,6 +291,90 @@ footer{
     margin-left: 96px;
 }
 .section-4{
-    height: 750px;
+    height: 650px;
     background-color: rgb(255, 255, 255);
+}
+.section-4 h2{
+    font-size: 45px;
+    margin-left: 96px;
+}
+.mainform{
+    width: 90%;
+    height: 450px;
+    background-color: white;
+    position: relative;
+    display: inline-block;
+    margin: 5%;
+}
+.bussines{
+    margin-top: 20px;
+    width: 500px;
+    height: 100px;
+    background-color: white;
+    display: inline-block;
+    margin-left: 50px;
+    font-size: 20px;
+}
+.contact-area{
+    width: 40%;
+    height: 125px;
+    background-color: white;
+    display: block;
+    padding-left: 50px;
+    margin-top: 22px;
+}
+.phone-number{
+    font-size: 20px;
+    margin-top: 20px;
+    width: 500px;
+    height: 100px;
+    background-color: white;
+    display: inline-block;
+    margin-left: 50px;
+    position: absolute;
+    right: 267px;
+    top: 123px;
+}
+.email-area{
+    font-size: 20px;
+    margin-top: 20px;
+    width: 500px;
+    height: 100px;
+    background-color: white;
+    display: inline-block;
+    margin-left: 50px;
+
+}
+.input-size{
+    width: 450px;
+    height: 35px;
+    border-radius: 5px;
+    border-color: grey;
+}
+.contact-area h3{
+    font-size: 20px;
+}
+.contact-area p{
+    font-size: 15px;
+    margin-top: 9px;
+}
+.form-message{
+    font-size: 20px;
+    margin-top: 20px;
+    width: 1056px;
+    height: 150px;
+    background-color: white;
+    display: inline-block;
+    margin-left: 50px;
+}
+.form-message textarea{
+    width: 1011px;
+    height: 90px;
+    border-radius: 5px;
+}
+.submit-bottom{
+    position: absolute;
+    right: 300px;
+    text-decoration: none;
+    color: #AACE9B;
 }

@@ -130,30 +130,36 @@
             <section class="section-4">
                 <div>
                     <h2>Contact Form</h2>
+                    <div class="green-line4"></div>
                 </div>
-                <div>
+                <div class="mainform">
                     <form action="process.php" method="POST">
-                        <div>
+                        <div class="bussines">
                             <label>Bussines name</label>
-                            <input type="text" name="bussines-name">
+                            <input type="text" class="input-size" name="bussines-name">
+                        </div>
+                        <div class="email-area">
                             <label>Email</label>
-                            <input type="email" name="email">
+                            <input type="email" class="input-size" name="email">
                         </div>
                 
-                        <div>
-                            <p>Contact area</p>
+                        <div class="contact-area">
+                            <h3>Contact area</h3>
                             <p><input type="radio" name="human-resources" value="human-resources"></input>Human resources</p>
                             <p><input type="radio" name="commercialization" value="commercialization"></input>Commercialization</p>
-                            <p><input type="radio" name="systems" value="systems"></input>Systems</p>
+                            <p><input type="radio" name="systems" value="systems"></input>Systems</p>       
+                        </div>
+                        <div class="phone-number">
                             <label>Phone number</label>
-                            <input type="text" name="phone-number">
+                            <input type="text" class="input-size" name="phone-number">
                         </div>
                 
-                        <div>
+                        <div class="form-message">
                             <label>Message</label>
                             <textarea name="message"></textarea>
-                            <input type="submit" name="submit"
-                            value="Submit">
+                        </div>
+                        <div class="submit-bottom">
+                            <input type="submit" class="input-size" name="submit" value="Submit">
                         </div>
                     </form>
                 </div>
