@@ -40,11 +40,33 @@ header .track{
 
 footer{
     float:right;
-    width:81%;
+    width:100%;
     height:100px;
     background-color: white;
     position:fixed;
     bottom:0;
+    margin-left: 3px;
+}
+footer h5{
+    padding-left: 628px;
+    padding-bottom: 10px;
+}
+footer h4{
+    padding-left: 523px;
+    padding-top: 10px;
+}
+.networks{
+    width: 10px;
+    height: 30px;
+    display: inline;
+    padding: 33%;
+}
+.green-line6{
+    height: 5px;
+    width: 100%;
+    background-color: #AACE9B;
+    top: 0px;
+    
 }
 
 .landing{
