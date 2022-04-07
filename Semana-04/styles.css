@@ -1,0 +1,462 @@
+body{
+    font-family: 'Roboto',arial;
+}
+.sidebar{
+
+    width: 19%;
+    height: 1024px;
+    background-color: rgb(245, 241, 241);
+    float:left;
+    position:fixed;
+    border-right:3px solid #000;
+
+}
+header{
+    width: 81%;
+    height: 155px;
+    float:right;
+    top: 0;
+    background-color: white;
+    display;
+
+}
+header .three-bars{
+    display: inline-block;
+    height: 33px;
+    width: 36px;
+    margin: 30px;
+}
+header .track{
+    display: inline-block;
+    font-size: 30px;
+}
+.green-line{
+    height: 3px;
+    width: 85%;
+    background-color: #AACE9B;
+    margin-left: 96px;
+    margin-top: 10px;
+}
+
+footer{
+    float:right;
+    width:100%;
+    height:100px;
+    background-color: white;
+    position:fixed;
+    bottom:0;
+    margin-left: 3px;
+}
+footer h5{
+    padding-left: 628px;
+    padding-bottom: 10px;
+}
+footer h4{
+    padding-left: 523px;
+    padding-top: 10px;
+}
+.networks{
+    width: 10px;
+    height: 30px;
+    display: inline;
+    padding: 33%;
+}
+.green-line6{
+    height: 5px;
+    width: 100%;
+    background-color: #AACE9B;
+    top: 0px;
+    
+}
+
+.landing{
+    float:right;
+    width:81%;
+    height:712px;
+    background-color: white;
+    overflow: auto;
+}
+.search-bar{
+    position: relative;
+    text-align: center;
+    margin: 20px;
+}
+.search-button{
+    position: relative;
+    top: 0;
+    height: 38px;
+    width: 215px;
+    padding-left: 57px;
+    border-radius: 7px;
+}
+.search-icon {
+    position: absolute;
+    height: 30x;
+    width: 30px;
+    right: 263px;
+    top: 6px;
+    z-index: 2;
+}
+
+.menu{
+    position: relative;
+    height: 110px;
+    font-size: 30px;
+}
+.menu a{
+    text-decoration: none;
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 50px;
+    color: black;
+}
+.green-line-2{
+    position: absolute;
+    height: 5px;
+    width: 85px;
+    background-color: #AACE9B;
+    bottom: 0px;
+    margin-left: 50px;
+}
+.home-menu a{
+    text-decoration: none;
+    color: rgb(112, 106, 106);
+}
+.home-menu{
+    height: 250px;
+    position: relative;
+    width: 250px;
+    background-color: rgb(245, 241, 241);
+    border-bottom: gray;
+    margin-left: 50px;
+    display: block;
+}
+.home-menu .homes,.home-menu .sign-up,.home-menu .log-in {
+	border-bottom:1px solid grey;
+    margin-bottom:30px;
+    padding-bottom: 5px;
+    font-size: 20px;
+	}
+.home-menu .homes {
+	margin-top:40px;
+    padding-top: 40px;
+	}
+.greyline{
+    position: absolute;
+    height: 1px;
+    width: 245px;
+    background-color: rgb(112, 106, 106);
+    bottom: 0px;
+    margin-left: 0px;
+}
+.getintouch{
+    position: relative;
+    height: 110px;
+    font-size: 30px;
+}
+.getintouch a{
+    text-decoration: none;
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 50px;
+    color: black;
+}
+.green-line-3{
+    position: absolute;
+    height: 5px;
+    width: 180px;
+    background-color: #AACE9B;
+    bottom: 0px;
+    margin-left: 50px;
+}
+
+.textside{
+    width: 249px;
+    height: 150px;
+    text-align: left;
+    font-size: 19px;
+    margin-left: 50px;
+    margin-top: 28px;
+    color: gray;
+}
+.contact{
+    position: relative;
+    background-color: rgb(245, 241, 241);
+    margin-left: 50px;
+    width: 80%;
+    height: 245px;
+    display: block;
+    top: 40px;
+
+}
+.contact .mail,.contact .adress,.contact .adress 
+{
+	display:inline-block;
+	padding: 10px 0px 10px 0px;
+	}
+.contact .mail a,.contact .adress a,.contact .phone a{
+	display:inline-block;
+    text-decoration: none;
+    color: gray;
+	}
+.contact .mail img,.contact .phone img,.contact .adress img {
+	vertical-align:middle;
+	margin-right:5px;
+	}
+.contact .adress a{
+	width:200px;
+	}
+.contact .mail,.contact .adress {
+	border-bottom: 1px solid blue
+	}
+.section-1{
+    height: 750px;
+    background-color: white;
+    position: relative;
+    margin-left: 3px;
+}
+.section-1 h1, .section-1 h2, .section-1 p{
+    padding-left: 31px;
+    height: 20%;
+}
+.section-1 h1{
+    color: black;
+    font-size: 83px;
+    width: 443px;
+}
+.section-1 h2{
+    color: black;
+    font-size: 40px;
+    padding-top: 70px;
+    width: 700px;
+}
+.section-1 p{
+    color: gray;
+    font-size: 35px;
+    width: 700px;
+}
+.section-1 .main-image{
+    position: absolute;
+    width: 720px;
+    right: 0px;
+    top: 0px;
+    z-index: 2;
+}
+.button-1{
+    margin-left: 31px;
+    margin-top: 50px;
+    background-color:#AACE9B;
+    font-family: 'Roboto',arial;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 5px;
+    color: rgb(68, 67, 67);
+}
+.section-2{
+    height: 750px;
+    background-color: white;
+    position: relative;
+    margin-left: 3px;
+    padding: 5%;
+}
+.section-2 .record-hours,.section-2 .generate-reports, .section-2 .manage-resources, .section-2 .designate-roles{
+    display: inline-block;
+    width: 45%;
+    height: 40%;
+    background-color: white;
+    height: 200px;
+    padding-top: 10%;
+}
+.section-2 p{
+    font-size: 30px;
+    width: 25%;
+    margin-left: 150px;
+    position: absolute;
+}
+.section-2 h3{
+    color: black;
+    font-size: 35px;
+    position: absolute;
+    margin-top: -50px;
+    margin-left: 149px;
+}
+.section-2 h2{
+    font-size: 45px;
+    margin-left: 96px;
+}
+.green-line4{
+    height: 6px;
+    width: 85%;
+    background-color: #AACE9B;
+    margin-left: 96px;
+    margin-top: 10px;
+}
+.section-3{
+    height: 400px;
+    background-color: white;
+    position: relative;
+    margin-left: 3px;
+    padding: 5%;
+}
+.section-3 h2{
+    font-size: 45px;
+    margin-left: 96px;
+}
+.section-3 ul{
+    font-size: 30px;
+    margin-top: 100px;
+}
+.section-3 li{
+    padding: 10px;
+    margin-left: 96px;
+}
+.section-4{
+    height: 650px;
+    background-color: rgb(255, 255, 255);
+}
+.section-4 h2{
+    font-size: 45px;
+    margin-left: 96px;
+}
+.mainform{
+    width: 90%;
+    height: 450px;
+    background-color: white;
+    position: relative;
+    display: inline-block;
+    margin: 5%;
+}
+.bussines{
+    margin-top: 20px;
+    width: 500px;
+    height: 100px;
+    background-color: white;
+    display: inline-block;
+    margin-left: 50px;
+    font-size: 20px;
+}
+.contact-area{
+    width: 40%;
+    height: 125px;
+    background-color: white;
+    display: block;
+    padding-left: 50px;
+    margin-top: 22px;
+}
+.phone-number{
+    font-size: 20px;
+    margin-top: 20px;
+    width: 500px;
+    height: 100px;
+    background-color: white;
+    display: inline-block;
+    margin-left: 50px;
+    position: absolute;
+    right: 267px;
+    top: 123px;
+}
+.email-area{
+    font-size: 20px;
+    margin-top: 20px;
+    width: 500px;
+    height: 100px;
+    background-color: white;
+    display: inline-block;
+    margin-left: 50px;
+
+}
+.input-size{
+    width: 450px;
+    height: 35px;
+    border-radius: 5px;
+    border-color: grey;
+}
+.contact-area h3{
+    font-size: 20px;
+}
+.contact-area p{
+    font-size: 15px;
+    margin-top: 9px;
+}
+.form-message{
+    font-size: 20px;
+    margin-top: 20px;
+    width: 1056px;
+    height: 150px;
+    background-color: white;
+    display: inline-block;
+    margin-left: 50px;
+}
+.form-message textarea{
+    width: 1011px;
+    height: 90px;
+    border-radius: 5px;
+}
+.submit-bottom{
+    position: absolute;
+    right: 300px;
+    text-decoration: none;
+    color: #AACE9B;
+}
+.section-5{
+    height: 509px;
+    width: 778px;
+    background-color: rgb(226, 221, 221);
+    margin-left: 300px;
+    display: inline-block;
+    border-radius: 371px;
+    font-size: 12px;
+}
+.history{
+    width: 300px;
+    height: 300px;
+    margin-top: 80px;
+    margin-left: 82px;
+    
+}
+.objetive {
+    width: 300px;
+    height: 300px;
+    margin-top: 0px;
+    margin-left: 400px;
+    
+}
+.section-5 h2{
+    font-size: 20px;
+    color: gray;
+    margin-bottom: 5px;
+}
+.section-6{
+    width: 90%;
+    height: 400px;
+    background-color: white;
+    margin-left: 80px;
+    position: relative;
+    padding-top: 35px;
+}
+.column1, .column2, .column3{
+    width: 25%;
+    height: 350px;
+    display: inline-block;
+    padding-left: 100px;
+}
+.green-line5{
+    position: absolute;
+    height: 5px;
+    width: 300px;
+    background-color: #AACE9B;
+    
+}
+.section-6 ol{
+    font-size: 20px;
+    padding: 20px;
+}
+.section-6 h3{
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+.section-6 li{
+    padding-bottom: 25px;
+}
