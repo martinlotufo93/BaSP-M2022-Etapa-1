@@ -1,21 +1,31 @@
-
     body{
         width: 100%;
         background-color: aqua;
         font-family: 'Roboto',arial;
         background-color: #fff;
+        display:flex;
+        flex-direction:row;
     }
+
+    #container{
+        display:flex;
+        flex-direction:column;
+        flex-wrap:nowrap;
+        flex-grow:4;
+        height:100%;
+        flex-basis:0;
+    }
+
     header {
         background-color: blueviolet;
         width: 100%;
-        height: 9%;
+        height: 100px;
         display: flex;
         position: fixed;
         border-bottom: 3px solid #AACE9B;
     }
     header .img{
-        width: 10%;
-        height: ;
+        height:100%;
     }
     .header-left{
         width: 15%;
@@ -45,122 +55,13 @@
         margin-left: 0%;
         display: none;
     }
-    .sidebar {
-        width: 19%;
-        height: 100%;
-        top: 0;
-        background-color: #F6F6F6;
-        position: fixed;
-        border-right: 3px solid #000;
-        display: none;
-        
-    }
-    /*.search-bar {
-        padding-top: 8%;
-        height: 12%;
-        position: relative;
-        text-align: center;
-    }
-    .search-icon {
-        position: absolute;
-        width: 30px;
-        left: 16%;
-        top: 27%;
-        z-index: 2;
-    }
-    .search-button {
-        position: relative;
-        top: 0;
-        height: 38px;
-        width: 215px;
-        padding-left: 57px;
-        border-radius: 7px;
-    }
-    .menu {
-        height: 11%;
-        display: flex;
-        flex-direction: column;
-    }
-    .menu a {
-        text-decoration: none;
-        position: absolute;
-        margin-top: 6%;
-        margin-left: 11%;
-        color: black;
-        font-size: 30px;
-    }
-    .green-line-2 {
-        position: relative;
-        height: 5px;
-        width: 25%;
-        background-color: #AACE9B;
-        top: 70%;
-        margin-left: 11%;
-    }
-    .home-menu {
-        height: 20%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        padding: 0% 10% 0% 11%;
-    }
-    .home-menu a{
-        text-decoration: none;
-        color: #545454;
-    }
-    .greyline{
-        width: 90%;
-        margin-top: 1%;
-        height: 1px;
-        background-color: #545454;
-    }
-    .getintouch {
-        height: 10%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        font-size: 30px;
-    }
-    .getintouch a {
-        color: #000;
-        text-decoration: none;
-        margin-left: 11%;
-        margin-top: 11%;
-    }
-    .green-line-3 {
-        height: 5px;
-        width: 200px;
-        background-color: #AACE9B;
-        margin-left: 11%;
-        margin-top: 5%;
-    }
-    .textside {
-        height: 20%;
-        padding: 5% 15% 0% 12%;
-        font-size: 20px;
-        color: #545454;
-    }
-    .contact{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        height: 20%;
-        padding: 0% 5% 0% 12%;
-    }
-    .contacts{
-        display: flex;
-        align-items: center;
-    }
-    .contact a{
-        text-decoration: none;
-        color: #545454;
-    }*/
-    .landing{
+   
+    main{
         display: flex;
         flex-direction: column;
         background: rgb(255, 0, 119);
         width: 100%;
-        
+        overflow-y:scroll;
     }
     .section-1 {
         width: 100%;
@@ -169,7 +70,6 @@
     }
     #s1top{
         width: 100%;
-        line-height: ;
         font-size: 33px;
         margin: 25% 1% 1% 0%;
         text-align: center;
@@ -182,6 +82,7 @@
         align-items: center;
         margin-top: 20px;
     }
+    
     .s1img{
         flex-grow: 1;
         flex-basis: 0;
@@ -327,7 +228,7 @@
         list-style: decimal;
     }
     .section-6 li{
-        padding-top:5px ;
+        padding-top:5px;
         padding-bottom:5px ;
     }
     footer {
@@ -352,4 +253,113 @@
         min-width:49%
     }
 
-}   
+}  
+
+@media (min-width:920px){
+    aside {
+        height:100%;
+        width: 30%;
+        flex-grow:1;
+        background-color: #F6F6F6;
+        border-right: 3px solid #000;
+        overflow: hidden;
+        flex-basis:0;
+    }
+    .search-bar {
+        padding-top: 8%;
+        height: 12%;
+        position: relative;
+        text-align: center;
+    }
+    .search-icon {
+        position: absolute;
+        width: 30px;
+        left: 16%;
+        top: 27%;
+        z-index: 2;
+    }
+    .search-button {
+        position: relative;
+        top: 0;
+        height: 38px;
+        width: 215px;
+        padding-left: 57px;
+        border-radius: 7px;
+    }
+    .menu {
+        display: flex;
+        flex-direction: column;
+    }
+    .menu a {
+        text-decoration: none;
+        margin-top: 6%;
+        margin-left: 11%;
+        color: black;
+        font-size: 30px;
+    }
+    .green-line-2 {
+        height: 5px;
+        width: 25%;
+        background-color: #AACE9B;
+        margin-left: 11%;
+        margin-top: 5%;
+    }
+    .home-menu {
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0% 10% 0% 11%;
+    }
+    .home-menu a{
+        text-decoration: none;
+        color: #545454;
+    }
+    .greyline{
+        width: 90%;
+        margin-top: 1%;
+        height: 1px;
+        background-color: #545454;
+    }
+    .getintouch {
+        height: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        font-size: 30px;
+    }
+    .getintouch a {
+        color: #000;
+        text-decoration: none;
+        margin-left: 11%;
+        margin-top: 11%;
+    }
+    .green-line-3 {
+        height: 5px;
+        width: 200px;
+        background-color: #AACE9B;
+        margin-left: 11%;
+        margin-top: 5%;
+    }
+    .textside {
+        height: 20%;
+        padding: 5% 15% 0% 12%;
+        font-size: 20px;
+        color: #545454;
+    }
+    .contact{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 20%;
+        padding: 0% 5% 0% 12%;
+    }
+    .contacts{
+        display: flex;
+        align-items: center;
+    }
+    .contact a{
+        text-decoration: none;
+        color: #545454;
+    }
+}
