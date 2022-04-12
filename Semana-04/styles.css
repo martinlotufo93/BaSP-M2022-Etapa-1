@@ -1,13 +1,9 @@
-body{
-    font-family: 'Roboto',arial;
-    background-color: #fff;
-}
-@media (max-width: 480px) {
+
     body{
         width: 100%;
-        display: flex;
-        flex-direction: column;
         background-color: aqua;
+        font-family: 'Roboto',arial;
+        background-color: #fff;
     }
     header {
         background-color: blueviolet;
@@ -345,4 +341,15 @@ body{
         align-items: center;
         position: fixed;
     }
+@media (min-width:768px){
+
+    .can-do{
+        flex-direction: row;
+        flex-wrap:wrap;
+    }
+    .record-hours,.generate-reports,.manage-resources,.designate-roles {
+
+        min-width:49%
+    }
+
 }   
