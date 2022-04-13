@@ -16,33 +16,32 @@
         flex-basis:0;
     }
 
+    aside {
+        display:none;
+    }
+
     header {
         background-color: blueviolet;
-        width: 100%;
         height: 100px;
+        width: 100%;
         display: flex;
         position: fixed;
         border-bottom: 3px solid #AACE9B;
+        flex-direction: row;
+        align-items: center;
     }
-    header .img{
-        height:100%;
+    header img{
+        height:50px;
     }
     .header-left{
-        width: 15%;
-    }
-    header .three-bars {
-        height: 60%;
-        width: 90%;
-        padding-left: 25%;
-        padding-top: 25%;
+        min-width: 70px;
+        text-align:center;
     }
     .header-right{
-        width: 85%;
-        padding-left: 5%;
+        flex-grow:3;
     }
     header .track {
         font-size: 44px;
-        margin: 6% 4% 0% -2%;
         font-weight: bold;
         color: #373867;
     }
@@ -59,38 +58,41 @@
     main{
         display: flex;
         flex-direction: column;
-        background: rgb(255, 0, 119);
-        width: 100%;
         overflow-y:scroll;
+        padding: 0 10px;
     }
+
     .section-1 {
         width: 100%;
         flex-direction: row;
-        background-color: rgb(68, 0, 255);
     }
+
     #s1top{
         width: 100%;
+        margin-top: 120px;
         font-size: 33px;
-        margin: 25% 1% 1% 0%;
         text-align: center;
         font-weight: bold;
         color:#373867
     }
+
     #s2middle{
         display: flex;
         flex-direction: row;
         align-items: center;
         margin-top: 20px;
     }
-    
+
     .s1img{
         flex-grow: 1;
         flex-basis: 0;
         padding-right: 40px;
     }
+
     .s1img img{
         width: 100%;
     }
+    
     .s1h2{
         flex-grow: 2;
         flex-basis: 0;
@@ -161,6 +163,7 @@
         padding:10px;
         display: flex;
         flex-direction: column;
+        flex-wrap:wrap;
     }
     .mainform input[type=text],.mainform input[type=email],.mainform textarea {
         width:90%;
@@ -171,11 +174,13 @@
     }
     .mainform textarea {
         height: 75px;
+        width: 95%;
     }
     .bussines,.email-area,.contact-area,.phone-number,.form-message{
         flex-grow: 1;
         flex-basis: 0;
     }
+
     .mainform input[type=submit] {
         background-color: #AACE9B;
         font-family: 'Roboto',arial;
@@ -188,6 +193,8 @@
     }
     .submit-bottom{
         text-align: center;
+        width: 100%;
+        text-align: right;
     }
     .section-5{
         display: flex;
@@ -231,16 +238,20 @@
         padding-top:5px;
         padding-bottom:5px ;
     }
+
+    .history, .objetive{
+        flex-grow:1;
+        flex-basis: 0;
+    }
+
     footer {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background: rgb(255, 0, 119);
-        height: 7%;
         width: 100%;
         bottom: 0%;
         align-items: center;
-        position: fixed;
+        background: white;
     }
 @media (min-width:768px){
 
@@ -249,7 +260,6 @@
         flex-wrap:wrap;
     }
     .record-hours,.generate-reports,.manage-resources,.designate-roles {
-
         min-width:49%
     }
 
@@ -257,6 +267,7 @@
 
 @media (min-width:920px){
     aside {
+        display:block;
         height:100%;
         width: 30%;
         flex-grow:1;
@@ -268,23 +279,17 @@
     .search-bar {
         padding-top: 8%;
         height: 12%;
-        position: relative;
         text-align: center;
-    }
-    .search-icon {
-        position: absolute;
-        width: 30px;
-        left: 16%;
-        top: 27%;
-        z-index: 2;
+
     }
     .search-button {
-        position: relative;
-        top: 0;
         height: 38px;
         width: 215px;
         padding-left: 57px;
         border-radius: 7px;
+        background-image: url("images/search-icon.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
     }
     .menu {
         display: flex;
@@ -358,8 +363,54 @@
         display: flex;
         align-items: center;
     }
+
+    .contacts img{
+        padding-right:5px;
+    }
+    
     .contact a{
         text-decoration: none;
         color: #545454;
+    }
+
+    .record-hours,.generate-reports,.manage-resources,.designate-roles{
+        display:flex;
+        flex-direction:row;
+        text-align: left;
+    }
+
+    .son1{
+        width: 150px;
+        height: 150px;
+    }
+    .son2{
+        flex-grow:4;
+        flex-basis:0;
+    }
+
+    footer{
+        position: sticky;
+    }
+
+    .mainform{
+        flex-direction: row;
+    }
+
+    .bussines,.email-area,.contact-area,.phone-number,.form-message{
+        min-width: 40%;
+    }
+
+    .column1,.column2,.column3{
+        flex-grow:1;
+    }
+
+    .section-6{
+        display:flex;
+        flex-direction: row;
+        flex-wrap:wrap;
+    }
+
+    .section-5{
+        flex-direction: row;
     }
 }
