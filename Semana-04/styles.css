@@ -1,4 +1,4 @@
-    body{
+    body {
         width: 100%;
         background-color: aqua;
         font-family: 'Roboto',arial;
@@ -7,13 +7,33 @@
         flex-direction:row;
     }
 
-    #container{
+    #container {
         display:flex;
         flex-direction:column;
         flex-wrap:nowrap;
-        flex-grow:4;
+        flex-grow:5;
         height:100%;
         flex-basis:0;
+    }
+    #s1top {
+        width: 100%;
+        margin-top: 125px;
+        font-size: 30px;
+        text-align: center;
+        font-weight: bold;
+        color: #373867;
+    }
+
+    #s2middle {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    #s1button{
+        margin: 5px;
+        padding: 5px;
     }
 
     aside {
@@ -58,23 +78,6 @@
         flex-direction: row;
     }
 
-    #s1top{
-        width: 100%;
-        margin-top: 125px;
-        margin-bottom: 10%;
-        font-size: 30px;
-        text-align: center;
-        font-weight: bold;
-        color: #373867;
-    }
-
-    #s2middle{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-top: 20px;
-    }
-
     .s1img{
         flex-grow: 2;
         flex-basis: 0;
@@ -89,32 +92,29 @@
         flex-grow: 3;
         flex-basis: 0;
         font-size: 25px;
-        padding: 5% 0% 5% 5%;
+        padding: 10px 10px 10px 10px;
     }
     .section-1 p {
         font-size: 20px;
         font-style: italic;
         margin-top: 5%;
-        padding: 0% 5% 0% 5%;
+        padding: 10px 10px 10px 10px;
     }
-    #s1button{
-        margin: 5px;
-        padding: 5px;
-    }
+    
     .button-1 {
-    background-color: #AACE9B;
-    border-radius: 5px;
-    color: rgb(68, 67, 67);
-    margin: 5% 5% 5% 2%;
-    padding: 5%;
-}
+        background-color: #AACE9B;
+        border-radius: 5px;
+        color: rgb(68, 67, 67);
+        margin: 40px 0px 40px 0px;
+        padding: 25px;
+    }
 
 
     }
     .section-2{
         display: flex;
         flex-direction: column;
-        margin: 3% 3% 6% 3%;
+        margin: 40px 0px 40px 0px;
         
     }
     .section-2 h2{
@@ -122,18 +122,19 @@
     }
     .green-line4{
         height: 3px;
-        width: 80%;
+        width: 300px;
         background-color: #AACE9B;
         margin-left: 0px;
     }
     .green-line8{
         border-top: 3px;
         height: 3px;
-        width: 50%;
+        width: 430px;
         background-color: #AACE9B;
-        margin-left: 3%;
+        margin-left: 10px;
     }
-    .can-do{
+    .can-do {
+        padding-right: 50px;
         display: flex;
         flex-direction: column;
     }
@@ -153,8 +154,8 @@
     .can-do p{
         font-size: 25px;
     }
-    .section-3{
-        padding: 10% 3% 10% 3%;
+    .section-3 {
+        padding: 75px 10px 75px 10px;
         display: flex;
         flex-direction: column;
     }
@@ -164,11 +165,11 @@
     .section-3 ul{
         font-size: 20px;
     }
-    .section-3 li{
-        padding: 5% 0% 5% 0%;
+    .section-3 li {
+        padding: 30px 0px 30px 0px;
     }
     .section-4 h2{
-        margin-left: 2%;
+        margin-left: 10px;
         font-size: 30px;
     }
     .mainform {
@@ -180,7 +181,7 @@
         flex-direction: column;
         flex-wrap:wrap;
     }
-    .mainform input[type=text],.mainform input[type=email],.mainform textarea {
+    .mainform input[type=text], .mainform input[type=email], .mainform textarea {
         width:90%;
         border-radius:3px;
         height:25px;
@@ -191,7 +192,7 @@
         height: 75px;
         width: 95%;
     }
-    .bussines,.email-area,.contact-area,.phone-number,.form-message{
+    .bussines,.email-area,.contact-area,.phone-number,.form-message {
         flex-grow: 1;
         flex-basis: 0;
     }
@@ -206,21 +207,21 @@
         border-radius: 5px;
         color: rgb(68, 67, 67);
     }
-    .submit-bottom{
+    .submit-bottom {
         text-align: center;
         width: 100%;
     }
-    .section-5{
+    .section-5 {
         display: flex;
         flex-direction: column;
         margin: 10px 10px 10px 10px;
     }
-    .section-5 h2{
+    .section-5 h2 {
         font-size: 30px;
         margin: 10% 3% 2% 0%;
     }
-    .section-5 p{
-        margin: 2% 0% 2% 0%;
+    .section-5 p {
+        margin: 10px 0 10px 0;
         padding: 0%;
         font-size: 20px;
     }
@@ -232,7 +233,7 @@
     }
     .green-line6{
         height: 3px;
-        width: 120px;
+        width: 100%;
         background-color: #AACE9B;
         margin-left: 0px;
     }
@@ -269,27 +270,34 @@
         flex-direction: column;
         justify-content: center;
         width: 100%;
-        bottom: 0%;
+        bottom: 0;
         align-items: center;
         background: white;
     }
 @media (min-width:768px){
 
+    #s1top{
+        width: 100%;
+        margin-top: 20%;
+        font-size: 60px;
+    }
+
+    #s1button {
+        text-align: center;
+    }
+
     .can-do{
         flex-direction: row;
         flex-wrap:wrap;
     }
+
     .record-hours,.generate-reports,.manage-resources,.designate-roles {
         min-width:49%
     }
     header .track{
         margin-left: 20%;
     }
-    #s1top{
-        width: 100%;
-        margin-top: 20%;
-        font-size: 60px;
-    }
+
     .s1h2 {
         flex-grow: 3;
         flex-basis: 0;
@@ -303,9 +311,7 @@
         padding: 3% 5% 0% 5%;
         text-align: center;
     }
-    #s1button {
-        text-align: center;
-    }
+    
     .button-1 {
         background-color: #AACE9B;
         border-radius: 5px;
@@ -320,20 +326,41 @@
 
 }  
 
-@media (min-width:920px){
+@media (min-width:1440px){
+    #s1top {
+        font-size: 30px;
+        text-align: left;
+        font-weight: bold;
+        color: #000;
+        margin-top: 15%;
+    }
+    #s1top h1 {
+        font-size: 87px;
+        padding-right: 41%;
+        margin-left: 2%;
+        padding-bottom: 80px;
+    }
+    #s2middle {
+        margin-top: -10%;
+    }
+
+    #s1button {
+        text-align: left;
+    }
+
     aside {
         display:block;
         height:100%;
         width: 30%;
-        flex-grow:1;
+        flex-grow:2;
         background-color: #F6F6F6;
         border-right: 3px solid #000;
         overflow: hidden;
         flex-basis:0;
     }
     .search-bar {
-        padding-top: 8%;
-        height: 12%;
+        padding-top: 33px;
+        height: 100px;
         text-align: center;
 
     }
@@ -352,67 +379,64 @@
     }
     .menu a {
         text-decoration: none;
-        margin-top: 6%;
-        margin-left: 11%;
+        margin-top: 20px;
+        margin-left: 60px;
         color: black;
         font-size: 30px;
     }
     .green-line-2 {
         height: 5px;
-        width: 25%;
+        width: 150px;
         background-color: #AACE9B;
-        margin-left: 11%;
-        margin-top: 5%;
+        margin-left: 60px;
+        margin-top: 7px;
+        margin-bottom: 40px;
     }
     .home-menu {
-        height: 20%;
+        height: 200px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        padding: 0% 10% 0% 11%;
+        padding: 0px 15px 50px 60px;
     }
     .home-menu a{
         text-decoration: none;
         color: #545454;
     }
-    .greyline{
-        width: 90%;
-        margin-top: 1%;
+    .greyline {
+        width: 370px;
+        margin-top: 5px;
         height: 1px;
         background-color: #545454;
-    }
-    .getintouch {
-        height: 10%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        font-size: 30px;
     }
     .getintouch a {
         color: #000;
         text-decoration: none;
-        margin-left: 11%;
-        margin-top: 11%;
+        margin-left: 60px;
+        padding-top: 70px;
+        margin-bottom: 92px;
+        font-size: 30px;
     }
+    
     .green-line-3 {
         height: 5px;
         width: 200px;
         background-color: #AACE9B;
-        margin-left: 11%;
-        margin-top: 5%;
+        margin-left: 60px;
+        margin-top: 15px;
     }
     .textside {
         height: 20%;
-        padding: 5% 15% 0% 12%;
+        padding: 35px 80px 0px 60px;
         font-size: 20px;
         color: #545454;
     }
-    .contact{
+    .contact {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        height: 20%;
-        padding: 0% 5% 0% 12%;
+        height: 190px;
+        padding: 0px 75px 10px 60px;
     }
     .contacts{
         display: flex;
@@ -452,7 +476,7 @@
     }
 
     .bussines,.email-area,.contact-area,.phone-number,.form-message{
-        min-width: 40%;
+        min-width: 300px;
     }
 
     .column1,.column2,.column3{
@@ -471,85 +495,69 @@
     header .track{
         font-size: 40px;
         font-weight: normal;
-        margin-left: 1%;
+        margin-left: 10px;
         color: #000;
     }
     .green-line {
         background-color: #AACE9B;
-        margin-left: 1%;
-        width: 70%;
+        margin-left: 15px;
+        width: 1150px;
         border: 2px #AACE9B solid;
     }
     .header-right{
-        padding-top: 4%;
+        padding-top: 80px;
     }
     header{
         border-bottom: 3px solid #fff
 
     }
-    #s1top {
-        font-size: 30px;
-        text-align: left;
-        font-weight: bold;
-        color: #000;
-        margin-top: 15%;
-    }
-    #s1top h1 {
-        font-size: 87px;
-        padding-right: 35%;
-        margin-left: 5%;
-    }
-    #s2middle {
-        margin-top: -10%;
-    }
+    
     .s1h2 {
         flex-grow: 3;
         flex-basis: 0;
         font-size: 50px;
-        padding: 5% 0% 5% 0%;
-        margin: 5% 5% 5% 5%;
+        padding: 10px 0px 10px 0px;
+        margin: 10px 20px 10px 20px;
         text-align: left;
     }
     .s1img img {
-        margin-left: -20%;
+        margin-left: -100px;
     }
     .section-1 p {
         font-size: 30px;
         font-style: italic;
-        margin-top: 5%;
-        padding: 0% 50% 0% 5%;
+        margin-top: 0px;
+        padding: 75px 250px 40px 20px;
         text-align: left;
         color: #A4A4A4;
     }
-    #s1button {
-        text-align: left;
-    }
+    
     .button-1 {
-        padding: 1% 1%;
+        padding: 10px 10px;
     }
     .section-2{
-        padding: 3%
+        padding: 50px
     }
     .section-3 {
-        padding: 5% 3% 0% 3%;
+        padding: 70px 50px 0px 50px;
         display: flex;
         flex-direction: column;
     }
     .section-3 li {
-        padding: 0% 0% 5% 0%;
+        padding: 40px 0px 40px 0px;
     }
     .section-4{
-        margin: 3% 5%;
+        margin: 50px 70px;
     }
     .section-5{
-        margin: 3%;
+        margin: 50px;
     }
     .objetive,.history{
-        padding: 0%;
-        margin: 0% 10%
+        padding: 0px;
+        margin: 0px 100px;
     }
     .section-6{
-        margin: 5% 1% 1% 15%;
+        margin: 70px 0px 20px 170px;
     }
     
 }
