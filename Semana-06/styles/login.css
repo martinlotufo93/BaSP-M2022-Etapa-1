@@ -45,7 +45,7 @@ h2{
     flex-direction: column;
     margin-right: 80px;
 }
-.mainform input[type=password], .mainform input[type=email]{
+.mainform input[type=password], .mainform input[type=text]{
     width: 300px;
     border-radius: 3px;
     height: 30px;
