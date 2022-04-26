@@ -26,24 +26,20 @@
             }
         }
 
-    /*function hidemessage (input){
-        var element = document.getElementById(input.Id);
-        element.style.display="none";
-        }*/
     function login (){
         regexemail=/^([\da-z_.-]+)@([\da-z.-]+).([a-z.]{2,6})$/;
         var elementemail = document.getElementById("email");
         regexpassword=/^([a-zA-Z0-9]{8,})$/;
         var elementpassword = document.getElementById("password");
-            if(regexemail.exec(elementemail.value)&&regexpassword.exec(elementpassword.value)){
-            alert("todo esta ok" + " el email ingresado es correcto: " + elementemail.value + " el password ingresado es correcto: " + elementpassword.value);
+            if(regexemail.exec(elementemail.value) && regexpassword.exec(elementpassword.value)){
+            alert("todo esta ok" + " - el email ingresado es correcto: " + elementemail.value + " el password ingresado es correcto: " + elementpassword.value);
             }
             else if(!regexemail.exec(elementemail.value)){
                 CheckMail();
-                alert("El correo  no es valido");
+                alert("El correo no es valido");
             }else{
                 CheckPassword();
-                alert("la contraseña no cumple con los requisitos");
+                alert("La contraseña no cumple con los requisitos");
             }
             return false;
     }       

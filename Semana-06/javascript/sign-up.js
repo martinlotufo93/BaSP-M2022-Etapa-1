@@ -1,50 +1,46 @@
-function checkname(){
 
-    var elemento = document.getElementById("name");
+function validation(input,regex){
 
-    if(!/^([a-zA-Z]{3,})$/.exec(elemento.value)){
+    console.log(input);
+
+    var elemento = document.getElementById(input);
+
+    if(!regex.exec(elemento.value)){
 
         elemento.style.backgroundColor='red';
+
         console.log("error");
 
     }else{
         
-        elemento.style.backgroundColor='green';
         console.log("ok");
 
     }
+
+}
+
+function checkname(){
+
+    validation("name",/^([a-zA-Z]{3,})$/);
 
 }
 function checklastname(){
 
-    var elemento = document.getElementById("last-name");
-
-    if(!/^([a-zA-Z]{3,})$/.exec(elemento.value)){
-
-        elemento.style.backgroundColor='red';
-        console.log("error");
-
-    }else{
-        
-        elemento.style.backgroundColor='green';
-        console.log("ok");
-
-    }
+    validation("last-name",/^([a-zA-Z]{3,})$/);
 
 }
 function checkdni(){
-    var elemento = document.getElementById("dni");
 
-    if(!/^([0-9]{7,})$/.exec(elemento.value)){
-
-        elemento.style.backgroundColor='red';
-        console.log("error");
-
-    }else{
-        
-        elemento.style.backgroundColor='green';
-        console.log("ok");
-
-    }
+    validation("dni",/^([0-9]{7,})$/);
 
 }
+function checktel(){
+
+    validation("phone",/^([0-9]{10,})$/);
+
+}
+
+
+
+
+
