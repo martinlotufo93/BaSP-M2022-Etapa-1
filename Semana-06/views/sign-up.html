@@ -19,7 +19,7 @@
             <h1>Trackgenix S.A.</h1>
         </header>
         <h2>Sign Up</h2>
-        <form action="process.php" method="POST" class="mainform">
+        <form action="process.php" method="GET" class="mainform">
             <div class="name-area">
                 <label>Name</label>
                 <input type="text" id="name" name="name" onblur="checkname()" />
@@ -62,7 +62,7 @@
                 </div>
             </div>
             <div class="signup-button">
-                <button class= "sign-up-button" name="sign-up-button">Create</button>
+                <button class= "sign-up-button" name="sign-up-button" onclick="formstatus()">Create</button>
             </div>
         </form>
           
