@@ -1,4 +1,4 @@
-function validation(input,regex){
+function validation(input,regex,message){
 
     console.log(input);
 
@@ -8,14 +8,18 @@ function validation(input,regex){
 
         elemento.style.backgroundColor='red';
 
+        document.getElementById("error-" + input).innerHTML=message;
+        document.getElementById("error-" + input).style.display="block";
+        
         console.log("error");
 
         return false;
 
     }else{
-
-        elemento.style.backgroundColor='green';
         
+        elemento.style.backgroundColor='green';
+        document.getElementById("error-" + input).style.display="none";
+
         console.log("ok");
 
         return true;
@@ -24,58 +28,68 @@ function validation(input,regex){
 
 }
 
+function hidemessage(input){
+
+    var elemento = document.getElementById("error-" + input.id);
+    document.getElementById(input.id).style.backgroundColor='white';
+    elemento.innerHTML="";
+    elemento.style.display="none";
+
+}
+
 function checkname(){
 
-    return validation("name",/^([a-zA-Z]{3,})$/);
+    return validation("name",/^([a-zA-Z]{3,})$/,"The name it isn't correct");
 
 }
 function checklastname(){
 
-    return validation("last-name",/^([a-zA-Z]{3,})$/);
+    return validation("last-name",/^([a-zA-Z]{3,})$/,"The lastname it isn't correct");
 
 }
 function checkdni(){
 
-    return validation("dni",/^([0-9]{7,})$/);
+    return validation("dni",/^([0-9]{7,})$/,"The DNI it isn't correct");
 
 }
 function checktel(){
 
-    return validation("phone",/^([0-9]{10,})$/);
+    return validation("phone",/^([0-9]{10,})$/,"The Phone it isn't correct");
 
 }
 function checkweek(){
 
-    return validation("week",/^([0-9]{2}[/][0-9]{2}[/][0-9]{4})$/);
+    return validation("week",/^([0-9]{2}[/][0-9]{2}[/][0-9]{4})$/,"The Date it isn't correct");
 
 }
 function checkpassword(){
 
-    return validation("password",/^([a-zA-Z0-9]{8,})$/);
+    return validation("password",/^([a-zA-Z0-9]{8,})$/,"The password it isn't correct");
+
 
 }
-
 function checklocation(){
 
-    return validation("location",/^([a-zA-Z0-9]{3,})$/);
+    return validation("location",/^([a-zA-Z0-9]{3,})$/,"The Location it isn't correct");
 
 
 }
 function checkpostalcode(){
 
-    return validation("postal-code",/^([0-9]{4,5})$/);
+    return validation("postal-code",/^([0-9]{4,5})$/,"The Postal code it isn't correct");
+
 
 }
-
 function checkemail(){
 
-    return validation("email",/^([\da-z_.-]+)@([\da-z.-]+).([a-z.]{2,6})$/);
+    return validation("email",/^([\da-z_.-]+)@([\da-z.-]+).([a-z.]{2,6})$/,"The email it isn't correct");
+
 
 }
-
 function checkaddress(){
 
-    return validation("address",/^([a-zA-Z0-9 ]{5,})$/);
+    return validation("address",/^([a-zA-Z0-9 ]{5,})$/,"The address it isn't correct");
+
 
 }
 
@@ -85,14 +99,15 @@ function checkrepassword(){
     var repassword = document.getElementById("re-password");
     if(password.value == repassword.value){
         repassword.style.backgroundColor='';
-        console.log ("passwords match");
-
+        document.getElementById("error-re-password").style.display="none";
+        console.log ("coinciden");
         return true;
     }
         else{
         repassword.style.backgroundColor='red';
+        document.getElementById("error-re-password").innerHTML="The passwords have to match";
+        document.getElementById("error-re-password").style.display="block";
         console.log ("no coinciden");
-
         return false;
     }
 
@@ -145,7 +160,7 @@ function formstatus(){
         var email = "Email: " + document.getElementById("email").value;
         var week = "Birth Date: " + document.getElementById("week").value;
         var address = "Address: " + document.getElementById("address").value;
-        alert("todo esta ok" + " - Los datos ingresados son: " + name + " " + lastname + " " + dni + " " + phone + " " + password + " " + location + " " + postalcode + " " + email + " " + week + " " + address);
+        alert("todo esta ok" + " - Los datos ingresados son: " + name + " | " + lastname + " | " + dni + " | " + phone + " | " + password + " | " + location + " | " + postalcode + " | " + email + " | " + week + " | " + address);
     }
 
 
