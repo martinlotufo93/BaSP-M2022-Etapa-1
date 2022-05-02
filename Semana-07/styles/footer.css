@@ -1,0 +1,24 @@
+footer{
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 115px;
+    background-color: #373867;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-top: 10px solid #AACE9B;
+    align-items: center;
+    margin-top: 50px;
+}
+@media (min-width:1440px){
+    footer{
+        position: sticky;
+    }
+}
+/*@media screen and (max-width: 390px){
+    footer{
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+    }
+}*/
