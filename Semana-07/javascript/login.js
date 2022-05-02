@@ -20,9 +20,23 @@ function CheckPassword(){
         document.getElementById("message-error-password").innerHTML="The password is not correct.";
         document.getElementById("message-error-password").style.display="block";
     }
-}
+}  
 
 function login (){
+    var elementemail = document.getElementById("email");
+    var elementpassword = document.getElementById("password");
+    if((elementemail.value == 'rose@radiumrocket.com') && (elementpassword.value == 'BaSP2022')){
+        alert("Everything's fine" + " - The email entered is correct: " + elementemail.value + " The entered password is correct: " + elementpassword.value);
+    }
+    else if(elementemail.value != 'rose@radiumrocket.com'){
+        alert("The email entered is not correct:");
+    }else{
+        alert("The entered password is not correct:");
+    }
+    return false;
+}
+
+/*function login (){
     var elementemail = document.getElementById("email");
     var elementpassword = document.getElementById("password");
     if((elementemail.value == 'rose@radiumrocket.com') && (elementpassword.value == 'BaSP2022')){
@@ -34,7 +48,8 @@ function login (){
         alert("The entered password is not correct:");
     }
     return false;
-}   
+}*/ 
+
 /*function CheckMail(){
     regex=/^([\da-z_.-]+)@([\da-z.-]+).([a-z.]{2,6})$/;
     var elemento = document.getElementById("email");

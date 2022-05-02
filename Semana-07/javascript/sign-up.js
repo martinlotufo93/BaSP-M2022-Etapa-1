@@ -1,8 +1,252 @@
-function validation(input,regex,message){
+   
+/*function hidemessage(input){
 
-    console.log(input);
+    var elemento = document.getElementById("error-" + input.id);
+    document.getElementById(input.id).style.backgroundColor='white';
+    elemento.innerHTML="";
+    elemento.style.display="none";
 
-    var elemento = document.getElementById(input);
+}*/
+
+function checkname(){
+
+    var elemento = document.getElementById("name");
+    if (elemento.value.length>=3){
+        for (i=0;i<elemento.value.length;i++){
+            if ("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".indexOf(elemento.value.charAt(i),0) == -1){
+                elemento.style.backgroundColor='red';
+                document.getElementById("error-name").innerHTML="The name it isn't correct";
+                document.getElementById("error-name").style.display="block";
+                console.log("error");
+                return false;
+            }
+        }
+
+        elemento.style.backgroundColor='green';
+        document.getElementById("error-name").style.display="none";
+        console.log("ok");
+        return true;
+
+    }else{
+        elemento.style.backgroundColor='red';
+        document.getElementById("error-name").innerHTML="caracteres insuficientes 3 o mas";
+        document.getElementById("error-name").style.display="block";
+        console.log("error");
+        return false;
+    }
+
+}
+
+function checklastname(){
+
+    var elemento = document.getElementById("name");
+    if (elemento.value.length>=3){
+        for (i=0;i<elemento.value.length;i++){
+            if ("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".indexOf(elemento.value.charAt(i),0) == -1){
+                elemento.style.backgroundColor='red';
+                document.getElementById("error-name").innerHTML="The name it isn't correct";
+                document.getElementById("error-name").style.display="block";
+                console.log("error");
+                return false;
+            }
+        }
+
+        elemento.style.backgroundColor='green';
+        document.getElementById("error-name").style.display="none";
+        console.log("ok");
+        return true;
+
+    }else{
+        elemento.style.backgroundColor='red';
+        document.getElementById("error-name").innerHTML="caracteres insuficientes 3 o mas";
+        document.getElementById("error-name").style.display="block";
+        console.log("error");
+        return false;
+    }
+
+}
+
+function checkdni(){
+
+    var elemento = document.getElementById("name");
+    if (elemento.value.length>=7){
+        for (i=0;i<elemento.value.length;i++){
+            if ("0123456789".indexOf(elemento.value.charAt(i),0) == -1){
+                elemento.style.backgroundColor='red';
+                document.getElementById("error-name").innerHTML="The name it isn't correct";
+                document.getElementById("error-name").style.display="block";
+                console.log("error");
+                return false;
+            }
+        }
+
+        elemento.style.backgroundColor='green';
+        document.getElementById("error-name").style.display="none";
+        console.log("ok");
+        return true;
+
+    }else{
+        elemento.style.backgroundColor='red';
+        document.getElementById("error-name").innerHTML="caracteres insuficientes 3 o mas";
+        document.getElementById("error-name").style.display="block";
+        console.log("error");
+        return false;
+    }
+
+}
+
+function checkweek(){
+
+    var elemento = document.getElementById("name");
+    if (elemento.value.length>=10){
+        for (i=0;i<elemento.value.length;i++){
+            if ("0123456789".indexOf(elemento.value.charAt(i),0) == -1){
+                elemento.style.backgroundColor='red';
+                document.getElementById("error-name").innerHTML="The name it isn't correct";
+                document.getElementById("error-name").style.display="block";
+                console.log("error");
+                return false;
+            }
+        }
+
+        elemento.style.backgroundColor='green';
+        document.getElementById("error-name").style.display="none";
+        console.log("ok");
+        return true;
+
+    }else{
+        elemento.style.backgroundColor='red';
+        document.getElementById("error-name").innerHTML="caracteres insuficientes 3 o mas";
+        document.getElementById("error-name").style.display="block";
+        console.log("error");
+        return false;
+    }
+
+}
+
+var formatDob = "";
+function formatDate(date) {
+    var arDate = date.split('-');
+    return arDate[1] + '/' + arDate[2] + '/' + arDate[0];
+}
+
+function checktel(){
+
+    var elemento = document.getElementById("name");
+    if (elemento.value.length>=10){
+        for (i=0;i<elemento.value.length;i++){
+            if ("0123456789".indexOf(elemento.value.charAt(i),0) == -1){
+                elemento.style.backgroundColor='red';
+                document.getElementById("error-name").innerHTML="The name it isn't correct";
+                document.getElementById("error-name").style.display="block";
+                console.log("error");
+                return false;
+            }
+        }
+
+        elemento.style.backgroundColor='green';
+        document.getElementById("error-name").style.display="none";
+        console.log("ok");
+        return true;
+
+    }else{
+        elemento.style.backgroundColor='red';
+        document.getElementById("error-name").innerHTML="caracteres insuficientes 3 o mas";
+        document.getElementById("error-name").style.display="block";
+        console.log("error");
+        return false;
+    }
+
+}
+function checkaddress(){
+
+    var elemento = document.getElementById("name");
+    if (elemento.value.length>=5){
+        for (i=0;i<elemento.value.length;i++){
+            if ("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 0123456789".indexOf(elemento.value.charAt(i),0) == -1){
+                elemento.style.backgroundColor='red';
+                document.getElementById("error-name").innerHTML="The name it isn't correct";
+                document.getElementById("error-name").style.display="block";
+                console.log("error");
+                return false;
+            }
+        }
+
+        elemento.style.backgroundColor='green';
+        document.getElementById("error-name").style.display="none";
+        console.log("ok");
+        return true;
+
+    }else{
+        elemento.style.backgroundColor='red';
+        document.getElementById("error-name").innerHTML="caracteres insuficientes 3 o mas";
+        document.getElementById("error-name").style.display="block";
+        console.log("error");
+        return false;
+    }
+
+}
+function checklocation(){
+
+    var elemento = document.getElementById("name");
+    if (elemento.value.length>=3){
+        for (i=0;i<elemento.value.length;i++){
+            if ("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".indexOf(elemento.value.charAt(i),0) == -1){
+                elemento.style.backgroundColor='red';
+                document.getElementById("error-name").innerHTML="The name it isn't correct";
+                document.getElementById("error-name").style.display="block";
+                console.log("error");
+                return false;
+            }
+        }
+
+        elemento.style.backgroundColor='green';
+        document.getElementById("error-name").style.display="none";
+        console.log("ok");
+        return true;
+
+    }else{
+        elemento.style.backgroundColor='red';
+        document.getElementById("error-name").innerHTML="caracteres insuficientes 3 o mas";
+        document.getElementById("error-name").style.display="block";
+        console.log("error");
+        return false;
+    }
+
+}
+function checkpostalcode(){
+
+    var elemento = document.getElementById("name");
+    if (elemento.value.length>=3, elemento.value.length<=4){
+        for (i=0;i<elemento.value.length;i++){
+            if ("0123456789".indexOf(elemento.value.charAt(i),0) == -1){
+                elemento.style.backgroundColor='red';
+                document.getElementById("error-name").innerHTML="The name it isn't correct";
+                document.getElementById("error-name").style.display="block";
+                console.log("error");
+                return false;
+            }
+        }
+
+        elemento.style.backgroundColor='green';
+        document.getElementById("error-name").style.display="none";
+        console.log("ok");
+        return true;
+
+    }else{
+        elemento.style.backgroundColor='red';
+        document.getElementById("error-name").innerHTML="caracteres insuficientes 3 o mas";
+        document.getElementById("error-name").style.display="block";
+        console.log("error");
+        return false;
+    }
+
+}
+
+function checkemail(){
+
+    regex = /^([\da-z_.-]+)@([\da-z.-]+).([a-z.]{2,6})$/
+    var elemento = document.getElementById(mail);
 
     if(!regex.exec(elemento.value)){
 
@@ -28,68 +272,32 @@ function validation(input,regex,message){
 
 }
 
-function hidemessage(input){
-
-    var elemento = document.getElementById("error-" + input.id);
-    document.getElementById(input.id).style.backgroundColor='white';
-    elemento.innerHTML="";
-    elemento.style.display="none";
-
-}
-
-function checkname(){
-
-    return validation("name",/^([a-zA-Z]{3,})$/,"The name it isn't correct");
-
-}
-function checklastname(){
-
-    return validation("last-name",/^([a-zA-Z]{3,})$/,"The lastname it isn't correct");
-
-}
-function checkdni(){
-
-    return validation("dni",/^([0-9]{7,})$/,"The DNI it isn't correct");
-
-}
-function checktel(){
-
-    return validation("phone",/^([0-9]{10,})$/,"The Phone it isn't correct");
-
-}
-function checkweek(){
-
-    return validation("week",/^([0-9]{2}[/][0-9]{2}[/][0-9]{4})$/,"The Date it isn't correct");
-
-}
 function checkpassword(){
 
-    return validation("password",/^([a-zA-Z0-9]{8,})$/,"The password it isn't correct");
+    var elemento = document.getElementById("name");
+    if (elemento.value.length>=3, elemento.value.length<=4){
+        for (i=0;i<elemento.value.length;i++){
+            if ("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".indexOf(elemento.value.charAt(i),0) == -1){
+                elemento.style.backgroundColor='red';
+                document.getElementById("error-name").innerHTML="The name it isn't correct";
+                document.getElementById("error-name").style.display="block";
+                console.log("error");
+                return false;
+            }
+        }
 
+        elemento.style.backgroundColor='green';
+        document.getElementById("error-name").style.display="none";
+        console.log("ok");
+        return true;
 
-}
-function checklocation(){
-
-    return validation("location",/^([a-zA-Z0-9]{3,})$/,"The Location it isn't correct");
-
-
-}
-function checkpostalcode(){
-
-    return validation("postal-code",/^([0-9]{4,5})$/,"The Postal code it isn't correct");
-
-
-}
-function checkemail(){
-
-    return validation("email",/^([\da-z_.-]+)@([\da-z.-]+).([a-z.]{2,6})$/,"The email it isn't correct");
-
-
-}
-function checkaddress(){
-
-    return validation("address",/^([a-zA-Z0-9 ]{5,})$/,"The address it isn't correct");
-
+    }else{
+        elemento.style.backgroundColor='red';
+        document.getElementById("error-name").innerHTML="caracteres insuficientes 3 o mas";
+        document.getElementById("error-name").style.display="block";
+        console.log("error");
+        return false;
+    }
 
 }
 
@@ -169,3 +377,64 @@ function formstatus(){
  
 
 }
+
+
+
+
+
+
+
+/*function checklastname(){
+
+
+    
+    return validation("last-name",/^([a-zA-Z]{3,})$/,"The lastname it isn't correct");
+
+}
+function checkdni(){
+
+    return validation("dni",/^([0-9]{7,})$/,"The DNI it isn't correct");
+
+}
+function checktel(){
+
+    return validation("phone",/^([0-9]{10,})$/,"The Phone it isn't correct");
+
+}
+function checkweek(){
+
+    return validation("week",/^([0-9]{2}[/][0-9]{2}[/][0-9]{4})$/,"The Date it isn't correct");
+
+}
+function checkpassword(){
+
+    return validation("password",/^([a-zA-Z0-9]{8,})$/,"The password it isn't correct");
+
+
+}
+function checklocation(){
+
+    return validation("location",/^([a-zA-Z0-9]{3,})$/,"The Location it isn't correct");
+
+
+}
+function checkpostalcode(){
+
+    return validation("postal-code",/^([0-9]{4,5})$/,"The Postal code it isn't correct");
+
+
+}
+function checkemail(){
+
+    return validation("email",/^([\da-z_.-]+)@([\da-z.-]+).([a-z.]{2,6})$/,"The email it isn't correct");
+
+
+}
+function checkaddress(){
+
+    return validation("address",/^([a-zA-Z0-9 ]{5,})$/,"The address it isn't correct");
+
+
+}*/
+
+
