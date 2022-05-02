@@ -6,6 +6,14 @@ body{
     flex-direction:column;
     height: 100%;
 }
+#message-error-email{
+    font-size: 20px;
+    padding-left: 75px;
+}
+#message-error-password{
+    font-size: 20px;
+    padding-left: 75px;
+}
 .welcome{
     display: none;
 }
