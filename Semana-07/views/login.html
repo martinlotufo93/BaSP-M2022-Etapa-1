@@ -11,7 +11,6 @@
         <title>"Trackgenix S.A."</title>
         <link rel="stylesheet" href="../styles/reset.css">
         <link rel="stylesheet" href="../styles/login.css">
-		<script src="../javascript/login.js"></script>
         <link rel="stylesheet" href="../styles/header.css">
         <link rel="stylesheet" href="../styles/footer.css">
     </head>
@@ -27,10 +26,10 @@
             <form onsubmit = "return login()" class="mainform">
                 <div class="camps">
                     <label>Email</label>
-                    <input type="text" name="email" id="email" class="input-size" onblur="CheckMail()">
+                    <input type="text" name="email" id="email" class="input-size" onblur="checkemail()">
                     <div id="message-error-email"></div>
                     <label>Password</label>
-                    <input type="password" class="input-size" name="password" id="password" onblur="CheckPassword()">
+                    <input type="password" class="input-size" name="password" id="password" onblur="checkpassword()">
                     <div id="message-error-password"></div>
                 </div>
                 <div class="maindiv">
@@ -66,5 +65,7 @@
                 Copyright © 2022 Radium Rocket.  All rights reserved
             </h3>
         </footer>
+        
+		<script src="../javascript/login.js"></script>
     </body>
 </html> 
