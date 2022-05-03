@@ -1,12 +1,11 @@
-   
-/*function hidemessage(input){
+function hidemessage(input){
 
     var elemento = document.getElementById("error-" + input.id);
     document.getElementById(input.id).style.backgroundColor='white';
     elemento.innerHTML="";
     elemento.style.display="none";
 
-}*/
+}
 
 function checkname(){
 
@@ -95,14 +94,14 @@ function checkdni(){
 
 }
 
-/*function checkweek(){
+function checkweek(){
 
     var elemento = document.getElementById("week");
     if (elemento.value.length>=10){
         for (i=0;i<elemento.value.length;i++){
-            if ("0123456789".indexOf(elemento.value.charAt(i),0) == -1){
+            if ("0123456789/".indexOf(elemento.value.charAt(i),0) == -1){
                 elemento.style.backgroundColor='red';
-                document.getElementById("error-week").innerHTML="The name it isn't correct";
+                document.getElementById("error-week").innerHTML="The date it isn't correct";
                 document.getElementById("error-week").style.display="block";
                 console.log("error");
                 return false;
@@ -123,12 +122,6 @@ function checkdni(){
     }
 
 }
-
-var formatDob = "";
-function formatDate(date) {
-    var arDate = date.split('-');
-    return arDate[1] + '/' + arDate[2] + '/' + arDate[0];
-}*/
 
 function checktel(){
 
@@ -214,6 +207,7 @@ function checklocation(){
     }
 
 }
+
 function checkpostalcode(){
 
     var elemento = document.getElementById("postal-code");
@@ -252,8 +246,8 @@ function checkemail(){
 
         elemento.style.backgroundColor='red';
 
-        document.getElementById("error-" + input).innerHTML=message;
-        document.getElementById("error-" + input).style.display="block";
+        /*document.getElementById("error-" + input).innerHTML=message;
+        document.getElementById("error-" + input).style.display="block";*/
         
         console.log("error");
 
@@ -262,7 +256,7 @@ function checkemail(){
     }else{
         
         elemento.style.backgroundColor='green';
-        document.getElementById("error-" + input).style.display="none";
+        //document.getElementById("error-" + input).style.display="none";
 
         console.log("ok");
 
@@ -359,41 +353,89 @@ function formstatus(){
 
     else {
 
-        var name = "Name: " + document.getElementById("name").value;
-        var lastname = "Last name: " + document.getElementById("last-name").value;
-        var dni = "D.N.I.: " + document.getElementById("dni").value;
-        var phone = "Phone Number: " + document.getElementById("phone").value;
-        var password = "Password: " + document.getElementById("password").value;
-        var location = "Location: " + document.getElementById("location").value;
-        var postalcode = "Postal Code: " + document.getElementById("postal-code").value;
-        var email = "Email: " + document.getElementById("email").value;
-        var week = "Birth Date: " + document.getElementById("week").value;
-        var address = "Address: " + document.getElementById("address").value;
-        alert("todo esta ok" + " - Los datos ingresados son: " + name + " | " + lastname + " | " + dni + " | " + phone + " | " + password + " | " + location + " | " + postalcode + " | " + email + " | " + week + " | " + address);
+        var name = document.getElementById("name").value;
+        var lastname = document.getElementById("last-name").value;
+        var dni = document.getElementById("dni").value;
+        var phone = document.getElementById("phone").value;
+        var password = document.getElementById("password").value;
+        var location = document.getElementById("location").value;
+        var postalcode = document.getElementById("postal-code").value;
+        var email = document.getElementById("email").value;
+        var dob = document.getElementById("week").value;
+        var address = document.getElementById("address").value;
+        //alert("todo esta ok" + " - Los datos ingresados son: " + name + " | " + lastname + " | " + dni + " | " + phone + " | " + password + " | " + location + " | " + postalcode + " | " + email + " | " + week + " | " + address);
+
+      
+
+        const baseUrl = `https://basp-m2022-api-rest-server.herokuapp.com/signup?name=${name}&lastName=${lastname}&dni=${dni}&phone=${phone}&address=${address}&dob=${dob}&city=${location}&zip=${postalcode}&email=${email}&password=${password}`
+    
+    fetch(baseUrl)
+        .then(response =>
+            response.json())
+        .then(datarecived =>
+            okcase(datarecived))
+        .catch((error) => {
+            errorcase(error)
+        });
+
+
+
+    alert("todo esta ok" + " - Los datos ingresados son: " + name + " | " + lastname + " | " + dni + " | " + phone + " | " + password + " | " + location + " | " + postalcode + " | " + email + " | " + dob + " | " + address);
+
     }
-
-
     return false;
     
- 
-
 }
+
+
+
 function okcase (datarecived){
     console.log (datarecived);
-    if (datarecived.success === true){
+    if (datarecived.success == true){
         alert (`Todo bien señor ${datarecived.msg}`);
+        localStorage.setItem("address", datarecived.data.address);
+        localStorage.setItem("city", datarecived.data.city);
+        localStorage.setItem("dni", datarecived.data.dni);
+        localStorage.setItem("dob", datarecived.data.dob);
+        localStorage.setItem("email", datarecived.data.email);
+        localStorage.setItem("id", datarecived.data.id);
+        localStorage.setItem("lastName", datarecived.data.lastName);
+        localStorage.setItem("name", datarecived.data.name);
+        localStorage.setItem("password", datarecived.data.password);
+        localStorage.setItem("phone", datarecived.data.phone);
+        localStorage.setItem("zip", datarecived.data.zip);
     }
     else {
-        errorcase(datarecived.msg);
+        errorcase(datarecived);
     } 
 }
 
 function errorcase (error) {
-    alert (`Todo mal señor ${error}`);
+    var msg = `Error`;
+    for (i=0;i<error.errors.length;i++){
+        msg = msg + " | " + error.errors[i].msg;
+    }
+
+    alert(msg);
+
+
 }
 
 
+window.addEventListener("load", function () {
 
+    document.getElementById("name").value = localStorage.getItem("name");
+    document.getElementById("last-name").value = localStorage.getItem("lastName");
+    document.getElementById("dni").value = localStorage.getItem("dni");
+    document.getElementById("phone").value = localStorage.getItem("phone");
+    document.getElementById("password").value = localStorage.getItem("password");
+    document.getElementById("location").value = localStorage.getItem("city");
+    document.getElementById("postal-code").value = localStorage.getItem("zip");
+    document.getElementById("email").value = localStorage.getItem("email");
+    document.getElementById("week").value = localStorage.getItem("dob");
+    document.getElementById("address").value = localStorage.getItem("address");
+
+});
 
 
 
