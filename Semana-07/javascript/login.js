@@ -9,7 +9,7 @@ function checkemail(){
 
         inputemail.style.backgroundColor='red';
 
-        document.getElementById("message-error-email").innerHTML="The email it isn't correct";
+        document.getElementById("message-error-email").innerHTML="The email it is not correct.";
         document.getElementById("message-error-email").style.display="block";
         
         console.log("error");
@@ -35,7 +35,7 @@ function checkpassword(){
         for (i=0;i<inputpassword.value.length;i++){
             if ("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890".indexOf(inputpassword.value.charAt(i),0) == -1){
                 inputpassword.style.backgroundColor='red';
-                document.getElementById("error-name").innerHTML="The password it isn't correct";
+                document.getElementById("error-name").innerHTML="The password it is not correct.";
                 document.getElementById("error-name").style.display="block";
                 console.log("error");
                 return false;
@@ -49,7 +49,7 @@ function checkpassword(){
 
     }else{
         inputpassword.style.backgroundColor='red';
-        document.getElementById("message-error-password").innerHTML="caracteres insuficientes 3 o mas";
+        document.getElementById("message-error-password").innerHTML="Insufficient Characters.";
         document.getElementById("message-error-password").style.display="block";
         console.log("error");
         return false;
@@ -85,7 +85,7 @@ else {
 
 
 
-    alert("todo esta ok" + " - Los datos ingresados son: " + password + " | " + email );
+    alert("Everything is fine" + " - The data entered are: " + password + " | " + email );
 }
 return false;
 }
@@ -93,7 +93,7 @@ return false;
 function okcase (datarecived){
     console.log (datarecived);
     if (datarecived.success === true){
-        alert (`Todo bien señor ${datarecived.msg}`);
+        alert (`Everything is fine ${datarecived.msg}`);
     }
     else {
         errorcase(datarecived.msg);
@@ -101,7 +101,7 @@ function okcase (datarecived){
 }
 
 function errorcase (error) {
-    alert (`Todo mal señor ${error}`);
+    alert (`Something is not working right ${error}`);
 }
 
 /*function login (){

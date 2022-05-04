@@ -1,11 +1,11 @@
-function hidemessage(input){
+/*function hidemessage(input){
 
     var elemento = document.getElementById("error-" + input.id);
     document.getElementById(input.id).style.backgroundColor='white';
     elemento.innerHTML="";
     elemento.style.display="none";
 
-}
+}*/
 
 function checkname(){
 
@@ -101,7 +101,7 @@ function checkweek(){
         for (i=0;i<elemento.value.length;i++){
             if ("0123456789/".indexOf(elemento.value.charAt(i),0) == -1){
                 elemento.style.backgroundColor='red';
-                document.getElementById("error-week").innerHTML="The date it isn't correct";
+                document.getElementById("error-week").innerHTML="The date it is not correct.";
                 document.getElementById("error-week").style.display="block";
                 console.log("error");
                 return false;
@@ -115,7 +115,7 @@ function checkweek(){
 
     }else{
         elemento.style.backgroundColor='red';
-        document.getElementById("error-week").innerHTML="caracteres insuficientes 3 o mas";
+        document.getElementById("error-week").innerHTML="The date it isn't correct.";
         document.getElementById("error-week").style.display="block";
         console.log("error");
         return false;
@@ -130,7 +130,7 @@ function checktel(){
         for (i=0;i<elemento.value.length;i++){
             if ("0123456789".indexOf(elemento.value.charAt(i),0) == -1){
                 elemento.style.backgroundColor='red';
-                document.getElementById("error-phone").innerHTML="Insufficient Characters.";
+                document.getElementById("error-phone").innerHTML="The phone you entered is not correct.";
                 document.getElementById("error-phone").style.display="block";
                 console.log("error");
                 return false;
@@ -151,6 +151,7 @@ function checktel(){
     }
 
 }
+
 function checkaddress(){
 
     var elemento = document.getElementById("address");
@@ -158,27 +159,28 @@ function checkaddress(){
         for (i=0;i<elemento.value.length;i++){
             if ("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 0123456789".indexOf(elemento.value.charAt(i),0) == -1){
                 elemento.style.backgroundColor='red';
-                document.getElementById("error-name").innerHTML="The name it isn't correct";
-                document.getElementById("error-name").style.display="block";
+                document.getElementById("error-address").innerHTML="The address it is not correct.";
+                document.getElementById("error-address").style.display="block";
                 console.log("error");
                 return false;
             }
         }
 
         elemento.style.backgroundColor='green';
-        document.getElementById("error-name").style.display="none";
+        document.getElementById("error-address").style.display="none";
         console.log("ok");
         return true;
 
     }else{
         elemento.style.backgroundColor='red';
-        document.getElementById("error-name").innerHTML="caracteres insuficientes 3 o mas";
-        document.getElementById("error-name").style.display="block";
+        document.getElementById("error-address").innerHTML="The address it is not correct.";
+        document.getElementById("error-address").style.display="block";
         console.log("error");
         return false;
     }
 
 }
+
 function checklocation(){
 
     var elemento = document.getElementById("location");
@@ -186,22 +188,22 @@ function checklocation(){
         for (i=0;i<elemento.value.length;i++){
             if ("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".indexOf(elemento.value.charAt(i),0) == -1){
                 elemento.style.backgroundColor='red';
-                document.getElementById("error-name").innerHTML="The name it isn't correct";
-                document.getElementById("error-name").style.display="block";
+                document.getElementById("error-location").innerHTML="The location it is not correct.";
+                document.getElementById("error-location").style.display="block";
                 console.log("error");
                 return false;
             }
         }
 
         elemento.style.backgroundColor='green';
-        document.getElementById("error-name").style.display="none";
+        document.getElementById("error-location").style.display="none";
         console.log("ok");
         return true;
 
     }else{
         elemento.style.backgroundColor='red';
-        document.getElementById("error-name").innerHTML="caracteres insuficientes 3 o mas";
-        document.getElementById("error-name").style.display="block";
+        document.getElementById("error-location").innerHTML="The location it is not correct.";
+        document.getElementById("error-location").style.display="block";
         console.log("error");
         return false;
     }
@@ -215,22 +217,22 @@ function checkpostalcode(){
         for (i=0;i<elemento.value.length;i++){
             if ("0123456789".indexOf(elemento.value.charAt(i),0) == -1){
                 elemento.style.backgroundColor='red';
-                document.getElementById("error-name").innerHTML="The name it isn't correct";
-                document.getElementById("error-name").style.display="block";
+                document.getElementById("error-postal-code").innerHTML="The postal code it is not correct.";
+                document.getElementById("error-postal-code").style.display="block";
                 console.log("error");
                 return false;
             }
         }
 
         elemento.style.backgroundColor='green';
-        document.getElementById("error-name").style.display="none";
+        document.getElementById("error-postal-code").style.display="none";
         console.log("ok");
         return true;
 
     }else{
         elemento.style.backgroundColor='red';
-        document.getElementById("error-name").innerHTML="caracteres insuficientes 3 o mas";
-        document.getElementById("error-name").style.display="block";
+        document.getElementById("error-postal-code").innerHTML="The postal code it is not correct.";
+        document.getElementById("error-postal-code").style.display="block";
         console.log("error");
         return false;
     }
@@ -245,10 +247,9 @@ function checkemail(){
     if(!regex.exec(elemento.value)){
 
         elemento.style.backgroundColor='red';
+        document.getElementById("error-email").innerHTML="The e-mail it is not correct.";
+        document.getElementById("error-email").style.display="block";
 
-        /*document.getElementById("error-" + input).innerHTML=message;
-        document.getElementById("error-" + input).style.display="block";*/
-        
         console.log("error");
 
         return false;
@@ -256,7 +257,6 @@ function checkemail(){
     }else{
         
         elemento.style.backgroundColor='green';
-        //document.getElementById("error-" + input).style.display="none";
 
         console.log("ok");
 
@@ -274,22 +274,22 @@ function checkpassword(){
         for (i=0;i<elemento.value.length;i++){
             if ("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890".indexOf(elemento.value.charAt(i),0) == -1){
                 elemento.style.backgroundColor='red';
-                document.getElementById("error-name").innerHTML="The name it isn't correct";
-                document.getElementById("error-name").style.display="block";
+                document.getElementById("error-password").innerHTML="The password it is not correct.";
+                document.getElementById("error-password").style.display="block";
                 console.log("error");
                 return false;
             }
         }
 
         elemento.style.backgroundColor='green';
-        document.getElementById("error-name").style.display="none";
+        document.getElementById("error-password").style.display="none";
         console.log("ok");
         return true;
 
     }else{
         elemento.style.backgroundColor='red';
-        document.getElementById("error-name").innerHTML="caracteres insuficientes 3 o mas";
-        document.getElementById("error-name").style.display="block";
+        document.getElementById("error-password").innerHTML="The password it is not correct.";
+        document.getElementById("error-password").style.display="block";
         console.log("error");
         return false;
     }
@@ -308,7 +308,7 @@ function checkrepassword(){
     }
         else{
         repassword.style.backgroundColor='red';
-        document.getElementById("error-re-password").innerHTML="The passwords have to match";
+        document.getElementById("error-re-password").innerHTML="The passwords do not match.";
         document.getElementById("error-re-password").style.display="block";
         console.log ("no coinciden");
         return false;
@@ -380,7 +380,7 @@ function formstatus(){
 
 
 
-    alert("todo esta ok" + " - Los datos ingresados son: " + name + " | " + lastname + " | " + dni + " | " + phone + " | " + password + " | " + location + " | " + postalcode + " | " + email + " | " + dob + " | " + address);
+    alert("Everything is fine." + " - The data entered are: " + name + " | " + lastname + " | " + dni + " | " + phone + " | " + password + " | " + location + " | " + postalcode + " | " + email + " | " + dob + " | " + address);
 
     }
     return false;
@@ -392,7 +392,7 @@ function formstatus(){
 function okcase (datarecived){
     console.log (datarecived);
     if (datarecived.success == true){
-        alert (`Todo bien señor ${datarecived.msg}`);
+        alert (`Everything is fine: ${datarecived.msg}`);
         localStorage.setItem("address", datarecived.data.address);
         localStorage.setItem("city", datarecived.data.city);
         localStorage.setItem("dni", datarecived.data.dni);

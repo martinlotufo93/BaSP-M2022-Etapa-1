@@ -6,6 +6,51 @@ body{
     flex-direction:column;
     height: 100%;
 }
+
+#error-name{
+    font-size: 20px;
+}
+#error-last-name{
+    font-size: 20px;
+    padding-left: 75px;
+}
+#error-dni{
+    font-size: 20px;
+    padding-left: 75px;
+}
+#error-week{
+    font-size: 20px;
+    padding-left: 75px;
+}
+#error-phone{
+    font-size: 20px;
+    padding-left: 75px;
+}
+#error-password{
+    font-size: 20px;
+    padding-left: 75px;
+}
+#error-location{
+    font-size: 20px;
+    padding-left: 75px;
+} 
+#error-postal-code{
+    font-size: 20px;
+    padding-left: 75px;
+} 
+#error-email{
+    font-size: 20px;
+    padding-left: 75px;
+}
+#error-address{
+    font-size: 20px;
+    padding-left: 75px;
+}
+#error-re-password{
+    font-size: 20px;
+    padding-left: 75px;
+}
+
 body label{
     color: #373867;
     font-weight: bold; 
@@ -115,6 +160,8 @@ h2{
 h3{
     padding: 10px;
 }
+
+
 @media screen and (max-width: 390px){
     header{
         display: none;
